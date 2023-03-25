@@ -7,7 +7,7 @@
 
 ### Database
 
-This project uses <a target="_blank" href="https://www.mongodb.com">MongoDB</a> for data storege, and <a target="_blank" href="https://www.prisma.io">Prisma</a> as a ORM.
+This project uses <a target="_blank" href="https://www.mongodb.com">MongoDB</a> for data storage, and <a target="_blank" href="https://www.prisma.io">Prisma</a> as a ORM.
 
 The Prisma's MongoDB database connector uses transactions to support nested writes. Transactions **require** a <a target="_blank" href="https://docs.mongodb.com/manual/tutorial/deploy-replica-set">replica set</a> deployment. The easiest way to deploy a replica set is with <a target="_blank" href="https://www.mongodb.com/cloud/atlas">Atlas</a>. It's free to get started.
 
