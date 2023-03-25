@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  softdesign:
+    env_file:
+      - .env
+    build:
+      context: .
+      args:
+        - DATABASE_URL=${DATABASE_URL}
+    image: softdesign
+    ports:
+      - 3000:3000

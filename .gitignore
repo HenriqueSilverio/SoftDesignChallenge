@@ -1,0 +1,12 @@
+dist
+.env
+.idea
+.vscode
+coverage
+.DS_Store
+yarn.lock
+.eslintcache
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
