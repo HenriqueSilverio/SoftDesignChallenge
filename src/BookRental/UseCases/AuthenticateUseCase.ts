@@ -2,6 +2,7 @@ import UseCase from '../../BuildingBlocks/UseCase/UseCase'
 import UUID from '../../BuildingBlocks/ValueObject/UUID'
 
 import Gate from '../Auth/Gate'
+import DecodedToken from '../Auth/DecodedToken'
 
 import User from '../User/User'
 import UserRepository from '../User/UserRepository'
@@ -13,10 +14,6 @@ export interface Command {
 export interface Result {
   success: boolean,
   user: User | null,
-}
-
-export interface DecodedToken {
-  userID: string,
 }
 
 export default class AuthenticateUseCase implements UseCase<Command, Result> {
