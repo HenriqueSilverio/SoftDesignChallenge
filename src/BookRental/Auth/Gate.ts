@@ -4,8 +4,6 @@ import User from '../User/User'
 
 export type DecodedJWT = Jwt | JwtPayload | string | undefined
 
-export type EncodedJWT = string | undefined
-
 export default class Gate {
   private readonly secret: string
 
@@ -24,7 +22,7 @@ export default class Gate {
     })
   }
 
-  public async signIn(user: User): Promise<EncodedJWT> {
+  public async signIn(user: User): Promise<string> {
     return new Promise((resolve, reject) => {
       const identity = user.identity.valueOf()
 
@@ -39,6 +37,9 @@ export default class Gate {
       JWT.sign(data, this.secret, opts, (error, token) => {
         if (error) {
           return reject(error)
+        }
+        if (!token) {
+          return reject(new Error('undefined token'))
         }
         return resolve(token)
       })
